@@ -172,3 +172,8 @@ INSERT OVERWRITE TABLE persons3 partition(quantity)
    SELECT * WHERE color='green';
 
 SELECT * FROM persons3;
+
+
+INSERT INTO persons VALUES
+    (4,"Karen","Holcomb","1974-05-23","green",7),
+    (5,"Cody","Garrett","1973-04-22","green",5);
