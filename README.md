@@ -50,6 +50,10 @@ Para utilizar sqoop en el datanode debemos ejecutar lo siguiente
 
 Para exportar las tabla de la base de datos retail con sqoop ejecutar lo siguiente:
 ```     >_ sh /datanode/scripts/sqoop/script_sqoop_textfile.sh     ```
+```     >_ sh /datanode/scripts/sqoop/script_sqoop_avro.sh     ```
+
+Disponibilizar archivos avro para exportar a otro contenedor:
+``` hdfs dfs -put *.avsc /user/datapath/datasets/avro ```
 
 ## Hive
 Para poder trabajar con hive ingresamos al contenedor del hive-server. <br>
@@ -59,9 +63,9 @@ Abrimos un terminal nuevo y ejecutamos lo siguiente
 Para crear tablas externas en base a los datos importados con sqoop ejecutamos los siguientes pasos:<br>
 
 Abrir un terminal y copiar el archivo hive.hql a hive-server
-```     >_ docker cp datanode/scripts/hive/hive.hql hive-server:/opt      ``` <br> 
+```     >_ docker cp datanode/scripts/hive/hive_avro.hql hive-server:/opt      ``` <br> 
 En el terminal de hive-server ejecutamos lo siguiente para crear las tablas. 
-```     >_ hive -f /opt/hive.hql    ``` <br> 
+```     >_ hive -f /opt/hive_avro.hql    ``` <br> 
 
 
 
