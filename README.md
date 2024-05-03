@@ -50,6 +50,8 @@ Para utilizar sqoop en el datanode debemos ejecutar lo siguiente
 
 Para exportar las tabla de la base de datos retail con sqoop ejecutar lo siguiente:
 ```     >_ sh /datanode/scripts/sqoop/script_sqoop_textfile.sh     ```
+
+
 ```     >_ sh /datanode/scripts/sqoop/script_sqoop_avro.sh     ```
 
 Disponibilizar archivos avro para exportar a otro contenedor:
